@@ -1,6 +1,6 @@
-const sveltePreprocess = require("svelte-preprocess")
-const netlify = require("@sveltejs/adapter-netlify")
-const pkg = require("./package.json")
+import sveltePreprocess from "svelte-preprocess"
+import netlify from "@sveltejs/adapter-netlify"
+import require from "./package.json"
 
 /** @type {import('@sveltejs/kit').Config} */
 module.exports = {
