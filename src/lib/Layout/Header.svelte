@@ -1,18 +1,24 @@
 <script>
+  import { onMount } from "svelte"
+
   import Language from "./Language.svelte"
 
   let active = true
   let over = false
   let artwork = null
+  let imgElement
   const imgs = [
-    "https://p7.storage.canalblog.com/79/02/825573/61891337.jpg",
-    "https://www.albrightknox.org/sites/default/files/styles/fixed_height_medium/public/artwork/1968_006_o2.jpg?itok=fYALUKIV",
-    "https://numero.twic.pics/images/flexible_grid/100/guernica1.jpg",
+    "le_viaduc_de_l_estaque.jpg",
+    "figure_triste.jpg",
+    "guernica.webp",
   ]
-  if (active) {
-
-    
-  }
+  onMount(() => {
+    if (active) {
+      document.querySelector("body").style.overflow = "hidden"
+    } else {
+      document.querySelector("body").style.overflow = null
+    }
+  })
 </script>
 
 <svg
@@ -60,12 +66,15 @@
       <a href="">Guernica</a>
     </li>
   </ul>
-  <img src={imgs[artwork - 1]} alt="" />
+  <img src={imgs[artwork - 1]} alt="" bind:this={imgElement} />
 </div>
 
 <style lang="scss">
+  .img-scroll {
+    animation: imgScroll 2s ease-in-out;
+  }
   .menu {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     background: #f8f8f8;
@@ -76,8 +85,8 @@
     img {
       width: 33%;
       object-fit: contain;
-      animation: imgScroll 2s ease-in-out;
     }
+
     ul {
       font-size: 4rem;
       font-weight: 700;
