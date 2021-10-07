@@ -6,4 +6,4 @@
 <Home />
 <CubismeSection />
 
-<style></style>
+<style lang="scss"></style>
