@@ -1,6 +1,9 @@
 <script>
+  import Home from "$lib/Home.svelte"
+  import CubismeSection from "$lib/CubismeSection.svelte"
 </script>
 
-<h1>Col'Art</h1>
+<Home />
+<CubismeSection />
 
 <style></style>

@@ -3,7 +3,7 @@
 
   import Language from "./Language.svelte"
 
-  let active = true
+  let active = false
   let over = false
   let artwork = null
   let imgElement
@@ -131,7 +131,7 @@
     transform: translateX(0) !important;
   }
   svg {
-    position: absolute;
+    position: fixed;
     top: 2rem;
     right: 4rem;
     cursor: pointer;
