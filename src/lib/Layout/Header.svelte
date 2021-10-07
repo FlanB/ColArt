@@ -1,23 +1,198 @@
 <script>
+  import Language from "./Language.svelte"
+
+  let active = true
+  let over = false
+  let artwork = null
+  const imgs = [
+    "https://p7.storage.canalblog.com/79/02/825573/61891337.jpg",
+    "https://www.albrightknox.org/sites/default/files/styles/fixed_height_medium/public/artwork/1968_006_o2.jpg?itok=fYALUKIV",
+    "https://numero.twic.pics/images/flexible_grid/100/guernica1.jpg",
+  ]
+  if (active) {
+
+    
+  }
 </script>
 
 <svg
-  width="64"
-  height="20"
-  viewBox="0 -2 64 20"
+  width="48"
+  height="48"
+  viewBox="0 0 64 64"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
   stroke="#323232"
-  stroke-width="2"
+  stroke-width="4"
+  class:active
+  class:over
+  on:mouseenter={() => {
+    if (!active) {
+      over = true
+    }
+  }}
+  on:mouseleave={() => {
+    if (!active) {
+      over = false
+    }
+  }}
+  on:click={() => {
+    active = !active
+    over = false
+  }}
 >
-  <line x1="0" y1="0" x2="64" y2="0" />
-  <line x1="32" y1="16" x2="64" y2="16" />
+  <line id="line1" x1="0" y1="32" x2="64" y2="32" />
+  <line id="line2" x1="32" y1="48" x2="64" y2="48" />
 </svg>
+<div
+  class="menu menu-{artwork}"
+  class:active
+  style="transform: translateX(100%) "
+>
+  <Language />
+  <ul>
+    <li on:mouseenter={() => (artwork = 1)} class="underline">
+      <a href="">Le viaduc de l'Estaque</a>
+    </li>
+    <li on:mouseenter={() => (artwork = 2)} class="underline">
+      <a href="">Figure triste</a>
+    </li>
+    <li on:mouseenter={() => (artwork = 3)} class="underline">
+      <a href="">Guernica</a>
+    </li>
+  </ul>
+  <img src={imgs[artwork - 1]} alt="" />
+</div>
 
-<style>
+<style lang="scss">
+  .menu {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: #f8f8f8;
+    transition: transform 1s ease-in-out;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.5s ease-in-out;
+    img {
+      width: 33%;
+      object-fit: contain;
+      animation: imgScroll 2s ease-in-out;
+    }
+    ul {
+      font-size: 4rem;
+      font-weight: 700;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      height: 100%;
+      justify-content: center;
+    }
+    li {
+      transition: 0.5s ease-in-out;
+    }
+  }
+  .menu-1 {
+    background-color: var(--color-artwork-1);
+    li {
+      color: var(--text-color-artwork-1);
+      &::after {
+        background-color: var(--text-color-artwork-1);
+      }
+    }
+  }
+  .menu-2 {
+    background: var(--color-artwork-2);
+    li {
+      color: var(--text-color-artwork-2);
+      &::after {
+        background-color: var(--text-color-artwork-2);
+      }
+    }
+  }
+  .menu-3 {
+    background: var(--color-artwork-3);
+    li {
+      color: var(--text-color-artwork-3);
+      &::after {
+        background-color: var(--text-color-artwork-3);
+      }
+    }
+  }
+  .active {
+    transform: translateX(0) !important;
+  }
   svg {
     position: absolute;
-    top: 4rem;
-    right: 8rem;
+    top: 2rem;
+    right: 4rem;
+    cursor: pointer;
+    z-index: 999;
+  }
+  line {
+    transition: transform 0.5s ease-in-out;
+    transform-origin: center;
+  }
+  .over {
+    #line1 {
+      animation: burgerOver1 0.75s ease-in-out;
+    }
+    #line2 {
+      animation: burgerOver2 0.75s ease-in-out;
+    }
+  }
+  .active {
+    #line1 {
+      transform: rotate(45deg);
+    }
+    #line2 {
+      transform: rotate(-45deg) translate(-32px, -16px) scaleX(2);
+    }
+  }
+  @keyframes burgerOver1 {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      visibility: hidden;
+      transform: translateX(65px);
+    }
+    51% {
+      visibility: visible;
+      transform: translateX(-65px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes burgerOver2 {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      visibility: hidden;
+      transform: translateX(-65px);
+    }
+    51% {
+      visibility: visible;
+      transform: translateX(65px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes imgScroll {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(100%);
+    }
+    51% {
+      visibility: hidden;
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
 </style>
