@@ -9,9 +9,8 @@
 
 <Header />
 
-<main>
+<main class="container">
   <slot />
 </main>
 
-<style>
-</style>
+<style></style>

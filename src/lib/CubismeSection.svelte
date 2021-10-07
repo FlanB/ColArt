@@ -18,6 +18,9 @@
 </section>
 
 <style lang="scss">
+  .cubisme {
+    height: 100vh;
+  }
   h1 {
     text-align: center;
     margin-bottom: 6rem;

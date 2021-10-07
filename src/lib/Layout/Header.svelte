@@ -82,6 +82,7 @@
     display: flex;
     justify-content: space-around;
     transition: 0.5s ease-in-out;
+    z-index: 998;
     img {
       width: 33%;
       object-fit: contain;
