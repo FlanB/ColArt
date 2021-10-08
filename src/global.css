@@ -198,6 +198,7 @@ section {
 body {
   line-height: 1;
   overflow-x: hidden;
+  transition: background 0.5s ease-in-out;
 }
 ol,
 ul {
