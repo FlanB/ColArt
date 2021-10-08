@@ -57,13 +57,13 @@
   <Language />
   <ul>
     <li on:mouseenter={() => (artwork = 1)} class="underline">
-      <a href="">Le viaduc de l'Estaque</a>
+      <a href="#viaduc" on:click={(active = false)}>Le viaduc de l'Estaque</a>
     </li>
     <li on:mouseenter={() => (artwork = 2)} class="underline">
-      <a href="">Figure triste</a>
+      <a href="#figure" on:click={(active = false)}>Figure triste</a>
     </li>
     <li on:mouseenter={() => (artwork = 3)} class="underline">
-      <a href="">Guernica</a>
+      <a href="#guernica" on:click={(active = false)}>Guernica</a>
     </li>
   </ul>
   <img src={imgs[artwork - 1]} alt="" bind:this={imgElement} />

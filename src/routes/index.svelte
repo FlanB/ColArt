@@ -14,18 +14,41 @@
         window.pageYOffset < viaduc.offsetTop + viaduc.offsetHeight / 2
       ) {
         document.body.style.background = "var(--color-artwork-1)"
+        viaduc.style.color = "var(--text-color-artwork-1)"
+        viaduc.querySelector(".artist").style.webkitTextStrokeColor =
+          "var(--text-color-artwork-1)"
+        viaduc.querySelector("p").style.color = "var(--text-color-artwork-1)"
+        figure.style.color = "var(--text-color-artwork-1)"
+        figure.querySelector(".artist").style.webkitTextStrokeColor =
+          "var(--text-color-artwork-1)"
+        figure.querySelector("p").style.color = "var(--text-color-artwork-1)"
       } else if (
         figure.offsetTop - screen.height / 2 < window.pageYOffset &&
         window.pageYOffset < figure.offsetTop + figure.offsetHeight / 2
       ) {
         document.body.style.background = "var(--color-artwork-2)"
+        figure.style.color = "var(--text-color-artwork-2)"
+        figure.querySelector(".artist").style.webkitTextStrokeColor =
+          "var(--text-color-artwork-2)"
+        figure.querySelector("p").style.color = "var(--text-color-artwork-2)"
+        guernica.style.color = "var(--text-color-artwork-2)"
+        guernica.querySelector(".artist").style.webkitTextStrokeColor =
+          "var(--text-color-artwork-2)"
+        guernica.querySelector("p").style.color = "var(--text-color-artwork-2)"
       } else if (
         guernica.offsetTop - screen.height / 2 < window.pageYOffset &&
         window.pageYOffset < guernica.offsetTop + guernica.offsetHeight / 2
       ) {
         document.body.style.background = "var(--color-artwork-3)"
+        guernica.style.color = "var(--text-color-artwork-3)"
+        guernica.querySelector(".artist").style.webkitTextStrokeColor =
+          "var(--text-color-artwork-3)"
+        guernica.querySelector("p").style.color = "var(--text-color-artwork-3)"
       } else {
         document.body.style.background = null
+        viaduc.style.color = "var(--black)"
+        viaduc.querySelector(".artist").style.webkitTextStrokeColor = null
+        viaduc.querySelector("p").style.color = null
       }
     })
   })
@@ -33,7 +56,7 @@
 
 <Home />
 <CubismeSection />
-<section class="viaduc" bind:this={viaduc}>
+<section id="viaduc" class="viaduc" bind:this={viaduc}>
   <h2>Le viaduc de l'Estaque</h2>
   <div class="content">
     <span class="artist">Georges Braque</span>
@@ -47,7 +70,7 @@
   </div>
   <span class="meta">1908 | Huile sur toile, 72,5 x 59 cm</span>
 </section>
-<section class="figure" bind:this={figure}>
+<section id="figure" class="figure" bind:this={figure}>
   <h2>Figure triste</h2>
   <div class="content">
     <p>
@@ -61,7 +84,7 @@
   </div>
   <span class="meta">1912 | Huile sur toile, 124.46 x 124.46</span>
 </section>
-<section class="guernica" bind:this={guernica}>
+<section id="guernica" class="guernica" bind:this={guernica}>
   <h2>Guernica</h2>
   <div class="content">
     <p>
@@ -78,6 +101,7 @@
 
 <style lang="scss">
   section {
+    transition: all 0.25s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -102,8 +126,8 @@
       justify-content: space-around;
     }
     p {
+      transition: 00.25s ease-in-out;
       font-size: 1.5rem;
-
       opacity: 0.9;
       display: flex;
       flex-direction: column;
@@ -121,19 +145,19 @@
     }
   }
   .viaduc {
-    color: var(--text-color-artwork-1) !important;
+    color: var(--text-color-artwork-1);
     .artist {
-      -webkit-text-stroke: 1px inherit;
+      -webkit-text-stroke: 1px var(--black);
       left: -1rem;
     }
     h2 {
       color: inherit;
     }
-    .meta {
+    p {
       color: inherit;
     }
-    p {
-      color: currentColor;
+    .meta {
+      color: inherit;
     }
   }
   .figure {
@@ -142,13 +166,13 @@
       right: -1rem;
     }
     h2 {
-      color: var(--text-color-artwork-2);
-    }
-    .meta {
-      color: var(--text-color-artwork-2);
+      color: inherit;
     }
     p {
-      color: var(--text-color-artwork-2);
+      color: inherit;
+    }
+    .meta {
+      color: inherit;
     }
   }
   .guernica {
@@ -157,13 +181,13 @@
       left: -3rem;
     }
     h2 {
-      color: var(--text-color-artwork-3);
-    }
-    .meta {
-      color: var(--text-color-artwork-3);
+      color: inherit;
     }
     p {
-      color: var(--text-color-artwork-3);
+      color: inherit;
+    }
+    .meta {
+      color: inherit;
     }
   }
 </style>
