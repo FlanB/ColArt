@@ -1,5 +1,4 @@
 <script>
-    let filter = true;
 </script>
 
 <div class="blue">

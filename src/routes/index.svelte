@@ -1,11 +1,39 @@
 <script>
   import Home from "$lib/Home.svelte"
   import CubismeSection from "$lib/CubismeSection.svelte"
+  import { onMount } from "svelte"
+
+  let viaduc
+  let figure
+  let guernica
+
+  onMount(() => {
+    document.addEventListener("scroll", () => {
+      if (
+        viaduc.offsetTop - screen.height / 2 < window.pageYOffset &&
+        window.pageYOffset < viaduc.offsetTop + viaduc.offsetHeight / 2
+      ) {
+        document.body.style.background = "var(--color-artwork-1)"
+      } else if (
+        figure.offsetTop - screen.height / 2 < window.pageYOffset &&
+        window.pageYOffset < figure.offsetTop + figure.offsetHeight / 2
+      ) {
+        document.body.style.background = "var(--color-artwork-2)"
+      } else if (
+        guernica.offsetTop - screen.height / 2 < window.pageYOffset &&
+        window.pageYOffset < guernica.offsetTop + guernica.offsetHeight / 2
+      ) {
+        document.body.style.background = "var(--color-artwork-3)"
+      } else {
+        document.body.style.background = null
+      }
+    })
+  })
 </script>
 
 <Home />
 <CubismeSection />
-<section class="viaduc">
+<section class="viaduc" bind:this={viaduc}>
   <h2>Le viaduc de l'Estaque</h2>
   <div class="content">
     <span class="artist">Georges Braque</span>
@@ -19,7 +47,7 @@
   </div>
   <span class="meta">1908 | Huile sur toile, 72,5 x 59 cm</span>
 </section>
-<section class="figure">
+<section class="figure" bind:this={figure}>
   <h2>Figure triste</h2>
   <div class="content">
     <p>
@@ -33,7 +61,7 @@
   </div>
   <span class="meta">1912 | Huile sur toile, 124.46 x 124.46</span>
 </section>
-<section class="guernica">
+<section class="guernica" bind:this={guernica}>
   <h2>Guernica</h2>
   <div class="content">
     <p>
@@ -93,18 +121,19 @@
     }
   }
   .viaduc {
+    color: var(--text-color-artwork-1) !important;
     .artist {
-      -webkit-text-stroke: 1px var(--text-color-artwork-1);
+      -webkit-text-stroke: 1px inherit;
       left: -1rem;
     }
     h2 {
-      color: var(--text-color-artwork-1);
+      color: inherit;
     }
     .meta {
-      color: var(--text-color-artwork-1);
+      color: inherit;
     }
     p {
-      color: var(--text-color-artwork-1);
+      color: currentColor;
     }
   }
   .figure {
