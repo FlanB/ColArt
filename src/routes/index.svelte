@@ -86,17 +86,20 @@
 </section>
 <section id="guernica" class="guernica" bind:this={guernica}>
   <h2>Guernica</h2>
-  <div class="content">
+  <div class="content1">
+    <img class="guernicapic" src="guernica.webp" alt="" />
     <p>
-      <span>Une approche nouvelle</span>Début 1911, Francis Picabia crée des
-      peintures colorées et expressives d'une manière fauviste, mais à la fin de
-      l'année, il développe une approche fragmentée et plane en réponse au
-      cubisme, mouvement en pleine effervescence à l'époque.
+      <span>Une période sombre de l'histoire</span>En 1937, la République
+      espagnole demande à Picasso de réaliser une grande composition pour
+      l’exposition Universelle de Paris. Juste après, cette commande Guernica
+      subit plusieurs vagues de bombardements de la part de L’Allemagne nazie.
+      Guernica, ravagée, compte des centaines de morts et de blessés, tous
+      civils.
     </p>
-    <img src="figure_triste.jpg" alt="" />
-    <span class="artist">Francis Picabia</span>
+
+    <span class="artist">Pablo Picasso</span>
   </div>
-  <span class="meta">1912 | Huile sur toile, 124.46 x 124.46</span>
+  <span class="meta">1937 | Huile sur toile, 752 x 351</span>
 </section>
 
 <style lang="scss">
@@ -119,6 +122,7 @@
       color: transparent;
       transform: rotate(180deg);
       font-weight: 700;
+      white-space: nowrap;
     }
     .content {
       position: relative;
@@ -176,9 +180,16 @@
     }
   }
   .guernica {
+    .content1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 100%;
+    }
     .artist {
       -webkit-text-stroke: 1px var(--text-color-artwork-3);
-      left: -3rem;
+      left: 10rem;
     }
     h2 {
       color: inherit;
@@ -188,6 +199,10 @@
     }
     .meta {
       color: inherit;
+      width: 80%;
+    }
+    .guernicapic {
+      width: 80%;
     }
   }
 </style>
