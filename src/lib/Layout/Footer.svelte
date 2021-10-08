@@ -16,10 +16,23 @@
             >Alexandre Dupin</a
         >
     </div>
+    <svg
+        viewBox="0 0 24 24"
+        width="48"
+        height="48"
+        stroke="currentColor"
+        stroke-width="2"
+        fill="none"
+        on:click={() => window.scrollTo(0, 0)}
+    >
+        <line x1="12" y1="19" x2="12" y2="5" />
+        <polyline points="5 12 12 5 19 12" /></svg
+    >
 </div>
 
 <style lang="scss">
     .globalfooter {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -30,8 +43,9 @@
         }
         a {
             color: var(--text-color-artwork-3);
-            &::after{background-color: var(--color-artwork-3);
-        }
+            &::after {
+                background-color: var(--color-artwork-3);
+            }
         }
     }
 
@@ -47,7 +61,7 @@
         bottom: 0;
         left: 0;
         margin-bottom: -0.3rem;
-        background-color: #FFF;
+        background-color: #fff;
         visibility: hidden;
         transform: scaleX(0);
         transition: all 0.3s ease-in-out;
@@ -74,8 +88,22 @@
         white-space: nowrap;
         gap: 4rem;
     }
-    
-    
 
-
+    svg {
+        position: absolute;
+        bottom: 1.5rem;
+        right: 4rem;
+        color: var(--text-color-artwork-3);
+        transition: 0.3s ease-in-out;
+        line {
+            transition: 0.3s ease-in-out;
+            transform-origin: top;
+        }
+        &:hover {
+            transform: translateY(-0.8rem);
+            & > line {
+                transform: scaleY(1);
+            }
+        }
+    }
 </style>
