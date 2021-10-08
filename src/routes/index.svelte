@@ -96,6 +96,7 @@
       color: transparent;
       transform: rotate(180deg);
       font-weight: 700;
+      white-space: nowrap;
     }
     .content {
       position: relative;
@@ -163,7 +164,7 @@
     }
     .artist {
       -webkit-text-stroke: 1px var(--text-color-artwork-3);
-      left: -3rem;
+      left: 10rem;
     }
     h2 {
       color: var(--text-color-artwork-3);
