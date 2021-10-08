@@ -11,7 +11,7 @@
     </p>
     <p>
       « Quand nous avons fait du cubisme, nous n’avions aucune intention de
-      faire du cubisme, mais seulement <b /> »
+      faire du cubisme, mais seulement <b>d’exprimer ce qui était en nous</b> »
       <span>- Picasso</span>
     </p>
   </div>
