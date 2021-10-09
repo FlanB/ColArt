@@ -1,7 +1,10 @@
 <script>
   let lang = "fr"
 </script>
-<div class="lang">
+
+<!-- j'ai supprimé la section FR/EN comme convenue -->
+
+<!-- <div class="lang">
   <span class={lang === "fr" ? "active" : ""} on:click={() => (lang = "fr")}>
     FR
   </span>
@@ -26,4 +29,4 @@
     font-weight: 700;
     text-decoration: underline;
   }
-</style>
+</style> -->

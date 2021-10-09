@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-  <title>Col'Art</title>
+  <title>Cub'Art</title>
 </svelte:head>
 
 <Header />
