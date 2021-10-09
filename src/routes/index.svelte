@@ -14,10 +14,12 @@
         window.pageYOffset < viaduc.offsetTop + viaduc.offsetHeight / 2
       ) {
         document.body.style.background = "var(--color-artwork-1)"
+
         viaduc.style.color = "var(--text-color-artwork-1)"
         viaduc.querySelector(".artist").style.webkitTextStrokeColor =
           "var(--text-color-artwork-1)"
         viaduc.querySelector("p").style.color = "var(--text-color-artwork-1)"
+
         figure.style.color = "var(--text-color-artwork-1)"
         figure.querySelector(".artist").style.webkitTextStrokeColor =
           "var(--text-color-artwork-1)"
@@ -27,10 +29,12 @@
         window.pageYOffset < figure.offsetTop + figure.offsetHeight / 2
       ) {
         document.body.style.background = "var(--color-artwork-2)"
+
         figure.style.color = "var(--text-color-artwork-2)"
         figure.querySelector(".artist").style.webkitTextStrokeColor =
           "var(--text-color-artwork-2)"
         figure.querySelector("p").style.color = "var(--text-color-artwork-2)"
+
         guernica.style.color = "var(--text-color-artwork-2)"
         guernica.querySelector(".artist").style.webkitTextStrokeColor =
           "var(--text-color-artwork-2)"
@@ -40,12 +44,14 @@
         window.pageYOffset < guernica.offsetTop + guernica.offsetHeight / 2
       ) {
         document.body.style.background = "var(--color-artwork-3)"
+
         guernica.style.color = "var(--text-color-artwork-3)"
         guernica.querySelector(".artist").style.webkitTextStrokeColor =
           "var(--text-color-artwork-3)"
         guernica.querySelector("p").style.color = "var(--text-color-artwork-3)"
       } else {
         document.body.style.background = null
+
         viaduc.style.color = "var(--black)"
         viaduc.querySelector(".artist").style.webkitTextStrokeColor = null
         viaduc.querySelector("p").style.color = null
@@ -196,10 +202,11 @@
     }
     p {
       color: inherit;
+      width: 80%;
     }
     .meta {
       color: inherit;
-      width: 80%;
+      width: 100%;
     }
     .guernicapic {
       width: 80%;
