@@ -1,15 +1,15 @@
 <script></script>
 
-<section class="cubisme">
-  <h1>Le cubisme</h1>
+<section class="cubisme" data-scroll-section>
+  <h1 data-scroll data-scroll-speed="2">Le cubisme</h1>
   <div class="quotes">
-    <p>
+    <p data-scroll data-scroll-speed="4">
       « Le cubisme est l’art de <b>peindre des ensembles nouveaux</b> avec des
       éléments empruntés non à la réalité de vision, mais à la
       <b>réalité de conception</b>. »
       <span>- Guillaume Apollinaire</span>
     </p>
-    <p>
+    <p data-scroll data-scroll-speed="6">
       « Quand nous avons fait du cubisme, nous n’avions aucune intention de
       faire du cubisme, mais seulement <b>d’exprimer ce qui était en nous</b> »
       <span>- Picasso</span>
