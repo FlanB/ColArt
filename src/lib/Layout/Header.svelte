@@ -31,6 +31,7 @@
   stroke-width="4"
   class:active
   class:over
+  id="burger"
   on:mouseenter={() => {
     if (!active) {
       over = true
@@ -136,6 +137,7 @@
     right: 4rem;
     cursor: pointer;
     z-index: 999;
+    transition: 0.5s ease-in-out;
   }
   line {
     transition: transform 0.5s ease-in-out;

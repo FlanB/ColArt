@@ -15,7 +15,8 @@
       ) {
         document.body.style.background = "var(--color-artwork-1)"
 
-        document.querySelector
+        document.querySelector("#burger").style.color =
+          "var(--text-color-artwork-1)"
         viaduc.style.color = "var(--text-color-artwork-1)"
         viaduc.querySelector(".artist").style.webkitTextStrokeColor =
           "var(--text-color-artwork-1)"
@@ -31,6 +32,8 @@
       ) {
         document.body.style.background = "var(--color-artwork-2)"
 
+        document.querySelector("#burger").style.color =
+          "var(--text-color-artwork-2)"
         figure.style.color = "var(--text-color-artwork-2)"
         figure.querySelector(".artist").style.webkitTextStrokeColor =
           "var(--text-color-artwork-2)"
@@ -46,12 +49,15 @@
       ) {
         document.body.style.background = "var(--color-artwork-3)"
 
+        document.querySelector("#burger").style.color =
+          "var(--text-color-artwork-3)"
         guernica.style.color = "var(--text-color-artwork-3)"
         guernica.querySelector(".artist").style.webkitTextStrokeColor =
           "var(--text-color-artwork-3)"
         guernica.querySelector("p").style.color = "var(--text-color-artwork-3)"
       } else {
         document.body.style.background = null
+        document.querySelector("#burger").style.color = null
         viaduc.style.color = "var(--black)"
         viaduc.querySelector(".artist").style.webkitTextStrokeColor = null
         viaduc.querySelector("p").style.color = null
