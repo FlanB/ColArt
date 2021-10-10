@@ -74,10 +74,11 @@
     <span class="artist">Georges Braque</span>
     <img src="le_viaduc_de_l_estaque.jpg" alt="" />
     <p>
-      <span>Un lieu chargé d'histoires</span> Petit port de pêche près de Marseille,
-      L’Estaque accueille à la fin du 19e siècle et au début du 20e de nombreux artistes.
-      Cézanne vient s’y réfugier pendant la guerre de 1870. C’est pour marcher sur
-      ses traces que Braque s’y rend pour la première fois en 1906, puis en 1908.
+      <span>Un lieu chargé d'histoires</span> Petit port de pêche près de
+      Marseille, L’Estaque accueille à la fin du 19e siècle et au début du 20e
+      de nombreux artistes. Cézanne vient s’y réfugier pendant la guerre de
+      1870. C’est pour marcher sur ses traces que Braque s’y rend pour la
+      première fois en 1906, puis en 1908.
       <!-- <span>Un décor inspirant</span>                                                                           /////Ne pas oublier d'intégrer ce texte et le scroll 
       Parmi les toiles peintes durant son deuxième séjour, pendant l’été 1908, 
       Le Viaduc à L’Estaque témoigne de cet hommage à Cézanne à partir duquel Braque développe sa propre peinture.
