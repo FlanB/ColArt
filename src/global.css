@@ -91,6 +91,31 @@ html.has-scroll-dragging {
   right: auto;
   bottom: 0;
 }
+
+body::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0a0a0a;
+  /* height: 1080px;
+  background-image: -webkit-gradient(linear,
+  left bottom,
+  left top,
+  color-stop(0.44, rgb(0, 0, 0)),
+  color-stop(0.52, rgb(107, 107, 107)),
+  color-stop(0.86, rgb(255, 255, 255))); */
+}
+
+
+
+body::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+body::-webkit-scrollbar-button {
+  height: 0px;
+}
 html,
 body,
 div,
