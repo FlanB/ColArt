@@ -225,7 +225,7 @@
     }
     .artist {
       -webkit-text-stroke: 1px var(--text-color-artwork-3);
-      left: 10rem;
+      left: 4rem;
     }
     h2 {
       color: inherit;
