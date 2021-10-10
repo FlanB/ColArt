@@ -54,7 +54,6 @@
   class:active
   style="transform: translateX(100%) "
 >
-  <Language />
   <ul>
     <li on:mouseenter={() => (artwork = 1)} class="underline">
       <a href="#viaduc" on:click={(active = false)}>Le viaduc de l'Estaque</a>
