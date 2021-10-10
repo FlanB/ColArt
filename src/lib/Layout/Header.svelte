@@ -15,13 +15,12 @@
   onMount(() => {
     if (active) {
       document.querySelector("body").style.overflow = "hidden"
-      
     } else {
       document.querySelector("body").style.overflow = null
       document.querySelector("body").style.color = "var(--text-color-artwork-1)" //jsp comment faire pour que ca change en fonction de tes if et else if dans "index.svelte"
-                                                                                 //j'ai essayé mais j'arrive po :/
-      }                                                                          //aussi faudra faire le meme principe lorsqu'on est dans le menu burger => la croix change 
-  })                                                                             //de couleurs en fonction du fond ... car sinon on la verra pas 
+      //j'ai essayé mais j'arrive po :/
+    } //aussi faudra faire le meme principe lorsqu'on est dans le menu burger => la croix change
+  }) //de couleurs en fonction du fond ... car sinon on la verra pas
 </script>
 
 <svg
@@ -141,6 +140,7 @@
     cursor: pointer;
     z-index: 999;
     transition: 0.5s ease-in-out;
+    color: var(--black);
   }
   line {
     transition: transform 0.5s ease-in-out;
