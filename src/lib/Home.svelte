@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte"
+  import { scrollY, scrollX } from "../functions"
 
   let cubisme
   let peinture
@@ -11,16 +12,6 @@
 
   onMount(() => {
     window.addEventListener("scroll", () => {
-      function scrollX(el, speed) {
-        el.style.transform = `translateX(${
-          (window.scrollY - el.offsetTop + window.innerHeight / 2) * speed
-        }px`
-      }
-      function scrollY(el, speed) {
-        el.style.transform = `translateY(${
-          (window.scrollY - el.offsetTop + window.innerHeight / 2) * speed
-        }px`
-      }
       scrollY(cubisme, 0.25)
       scrollX(peinture, 2)
       scrollX(mouvement, 1)

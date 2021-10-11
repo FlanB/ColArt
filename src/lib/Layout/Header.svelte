@@ -54,14 +54,26 @@
   style="transform: translateX(100%) "
 >
   <ul>
-    <li on:mouseenter={() => (artwork = 1)} class="underline">
-      <a href="#viaduc" on:click={(active = false)}>Le viaduc de l'Estaque</a>
+    <li
+      on:mouseenter={() => (artwork = 1)}
+      on:click={() => (active = false)}
+      class="underline"
+    >
+      <a href="#viaduc">Le viaduc de l'Estaque</a>
     </li>
-    <li on:mouseenter={() => (artwork = 2)} class="underline">
-      <a href="#figure" on:click={(active = false)}>Figure triste</a>
+    <li
+      on:mouseenter={() => (artwork = 2)}
+      on:click={() => (active = false)}
+      class="underline"
+    >
+      <a href="#figure">Figure triste</a>
     </li>
-    <li on:mouseenter={() => (artwork = 3)} class="underline">
-      <a href="#guernica" on:click={(active = false)}>Guernica</a>
+    <li
+      on:mouseenter={() => (artwork = 3)}
+      on:click={() => (active = false)}
+      class="underline"
+    >
+      <a href="#guernica">Guernica</a>
     </li>
   </ul>
   <img src={imgs[artwork - 1]} alt="" bind:this={imgElement} />

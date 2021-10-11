@@ -2,6 +2,7 @@
   import Home from "$lib/Home.svelte"
   import CubismeSection from "$lib/CubismeSection.svelte"
   import { onMount } from "svelte"
+  import { scrollY } from "../functions"
 
   let viaduc
   let figure
@@ -9,6 +10,9 @@
 
   onMount(() => {
     document.addEventListener("scroll", () => {
+      scrollY(viaduc.querySelector("h2"), 0.1)
+      scrollY(figure.querySelector("h2"), 0.1)
+      scrollY(guernica.querySelector("h2"), 0.1)
       if (
         viaduc.offsetTop - screen.height / 2 < window.pageYOffset &&
         window.pageYOffset < viaduc.offsetTop + viaduc.offsetHeight / 2
