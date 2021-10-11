@@ -150,7 +150,7 @@
 </section>
 <section id="guernica" class="guernica" bind:this={guernica}>
   <h2>Guernica</h2>
-  <div class="content1">
+  <div class="content">
     <img class="guernicapic" src="guernica.webp" alt="" />
     <div class="paragraph">
       <p>
@@ -189,6 +189,7 @@
     }
     h2 {
       font-weight: 700;
+      margin-bottom: 1rem;
     }
     .artist {
       position: absolute;
@@ -260,7 +261,7 @@
     }
   }
   .guernica {
-    .content1 {
+    .content {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -269,7 +270,7 @@
     }
     .artist {
       -webkit-text-stroke: 1px var(--text-color-artwork-3);
-      left: 4rem;
+      left: 3rem;
     }
     h2 {
       color: inherit;

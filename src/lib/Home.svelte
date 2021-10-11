@@ -39,7 +39,7 @@
     font-weight: 700;
     text-align: center;
     margin: 40vh 0;
-    transition: transform 1s ease-out;
+    transition: transform 0.5s ease-out;
   }
   .home {
     display: flex;
