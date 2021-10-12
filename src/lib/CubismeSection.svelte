@@ -40,7 +40,7 @@
   h1 {
     text-align: center;
     margin-bottom: 6rem;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.25s ease-out;
   }
   .quotes {
     display: flex;

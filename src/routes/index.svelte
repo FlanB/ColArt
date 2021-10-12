@@ -12,7 +12,6 @@
     document.addEventListener("scroll", () => {
       scrollY(viaduc.querySelector("h2"), 0.1)
       scrollY(figure.querySelector("h2"), 0.1)
-      scrollY(guernica.querySelector("h2"), 0.1)
       if (
         viaduc.offsetTop - screen.height / 2 < window.pageYOffset &&
         window.pageYOffset < viaduc.offsetTop + viaduc.offsetHeight / 2
@@ -189,7 +188,7 @@
     }
     h2 {
       font-weight: 700;
-      margin-bottom: 3rem;
+      margin-top: -8rem;
     }
     .artist {
       position: absolute;
@@ -267,6 +266,7 @@
       align-items: center;
       justify-content: space-around;
       height: 100%;
+      gap: 2rem;
     }
     .artist {
       -webkit-text-stroke: 1px var(--text-color-artwork-3);
@@ -274,6 +274,7 @@
     }
     h2 {
       color: inherit;
+
     }
     .paragraph {
       color: inherit;
