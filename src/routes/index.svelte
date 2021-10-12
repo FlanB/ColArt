@@ -189,7 +189,7 @@
     }
     h2 {
       font-weight: 700;
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
     }
     .artist {
       position: absolute;
